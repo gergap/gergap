@@ -12,7 +12,7 @@ let g:colors_name = "gergap"
 highlight Normal ctermbg=234
 highlight LineNumber    ctermfg=241 ctermbg=none cterm=none
 " used for the columns set with 'colorcolumn'
-highlight ColorColumn   ctermfg=211 ctermbg=0
+highlight ColorColumn   ctermfg=none ctermbg=0
 " placeholder characters substituded for concealed text
 "highlight Conceal
 "Cursor          the character under the cursor
@@ -78,6 +78,7 @@ highlight PmenuSel      ctermfg=238   ctermbg=121
 "PmenuThumb      Popup menu: Thumb of the scrollbar.
 "Question        hit-enter prompt and yes/no questions
 "SpellBad        Word that is not recognized by the spellchecker. spell
+highlight SpellBad      ctermfg=red ctermbg=none cterm=underline,bold
 "                This will be combined with the highlighting used otherwise.
 "SpellCap        Word that should start with a capital. spell
 "                This will be combined with the highlighting used otherwise.
