@@ -189,6 +189,12 @@ highlight Include       ctermfg=33 ctermbg=none cterm=none
 highlight Define       ctermfg=33 ctermbg=none cterm=none
 " PreCondit: #if, #else, #endif, etc.
 highlight PreCondit       ctermfg=33 ctermbg=none cterm=none
+" cCppOutWrapper: #if 0, #endif
+highlight cCppOutWrapper ctermfg=240 ctermbg=none cterm=italic
+" code between #if 0 and #endif
+highlight cCppOutIf2 ctermfg=240 ctermbg=none cterm=italic
+" cCppInWrapper: #if 1, #endif
+highlight cCppInWrapper ctermfg=green ctermbg=none cterm=none
 " Type: linked by cType: bool. char, uint16_t, ...
 highlight Type          ctermfg=39 ctermbg=none cterm=bold
 " Storage class: static, register, volatile, etc.
