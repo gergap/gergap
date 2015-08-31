@@ -8,13 +8,45 @@ if exists("syntax_on")
 endif
 let g:colors_name = "gergap"
 
+" Define colorscheme palette
+let s:black = 16
+let s:white = 231
+let s:gray1 = 232
+let s:gray2 = 234
+let s:gray3 = 236
+let s:gray4 = 238
+let s:gray5 = 240
+let s:gray6 = 242
+let s:gray7 = 244
+let s:gray8 = 246
+let s:red   = 1
+let s:red2  = 203
+let s:purple = 90
+let s:magenta = 201
+let s:magenta2 = 165
+let s:green = 154
+let s:green2 = 48
+let s:green3 = 121
+let s:yellow = 226
+let s:orange = 202
+let s:blue   = 27
+let s:blue2  = 33
+let s:blue3  = 39
+let s:blue4  = 45
+let s:cyan   = 51
+
 " General colors
-highlight Normal ctermbg=234
-highlight LineNumber    ctermfg=241 ctermbg=none cterm=none
+if &background == "light"
+    let s:bgcolor = s:white
+else
+    let s:bgcolor = s:gray2
+endif
+
+exe "highlight! Normal ctermbg=".s:bgcolor
 " used for the columns set with 'colorcolumn'
 highlight ColorColumn   ctermfg=none ctermbg=0
 " placeholder characters substituded for concealed text
-"highlight Conceal
+exe "highlight! Conceal ctermfg=".s:gray2." ctermbg=".s:blue4." cterm=none"
 "Cursor          the character under the cursor
 " We keep the default which switches forground and background color.
 "CursorIM        like Cursor, but used when in IME mode CursorIM
@@ -89,11 +121,11 @@ highlight SpellBad      ctermfg=red ctermbg=none cterm=underline,bold
 "                hardly ever used. spell
 "                This will be combined with the highlighting used otherwise.
 "StatusLine      status line of current window
-highlight StatusLine    ctermfg=246 ctermbg=236 cterm=none,bold
+highlight StatusLine    ctermfg=246 ctermbg=237 cterm=none,bold
 "StatusLineNC    status lines of not-current windows
 "                Note: if this is equal to "StatusLine" Vim will use "^^^" in
 "                the status line of the current window.
-highlight StatusLineNC  ctermfg=240 ctermbg=234 cterm=none
+highlight StatusLineNC  ctermfg=240 ctermbg=237 cterm=none
 "TabLine         tab pages line, not active tab page label
 "TabLineFill     tab pages line, where there are no labels
 "TabLineSel      tab pages line, active tab page label
@@ -129,20 +161,42 @@ highlight Menu          ctermfg=121 ctermbg=238 cterm=none
 
 " Syntax highlighting
 
+" Comments: any comment
+highlight Comment       ctermfg=48 ctermbg=none cterm=italic
+" Identifier: variable identifier names
+highlight Identifier    ctermfg=250 ctermbg=none cterm=none
+" Function: function name (also: methods for classes)
+highlight Function    ctermfg=154 ctermbg=none cterm=none
 " Statement: linked by cStatement: goto, break, return, continue, asm
 highlight Statement     ctermfg=39 ctermbg=none cterm=bold
-" Label: linked by cLabel: case default
-highlight Label         ctermfg=93 ctermbg=none cterm=none
 " Conditional: linked by cConditional: if else switch
-highlight Conditional   ctermfg=45 ctermbg=none cterm=none
+highlight Conditional   ctermfg=45 ctermbg=none cterm=bold
 " Repeat: linked by cRepeat: while for do
-highlight Repeat        ctermfg=190 ctermbg=none cterm=none
-" Todo: linkeds by cTodo: contained TODO FIXME XXX
-highlight Todo          ctermfg=234 ctermbg=201 cterm=bold
-" PreProc: #ifdef, #define ...
+highlight Repeat        ctermfg=199 ctermbg=none cterm=bold
+" Label: linked by cLabel: case default
+highlight Label         ctermfg=163 ctermbg=none cterm=none
+" Operator: sizeof, "+", "*", etc.
+highlight Operator         ctermfg=163 ctermbg=none cterm=none
+" Keyword: any other keyword
+highlight Keyword         ctermfg=163 ctermbg=none cterm=none
+" Exception: try catch throw
+highlight Exception         ctermfg=163 ctermbg=none cterm=none
+" PreProc: generic preprocessor
 highlight PreProc       ctermfg=33 ctermbg=none cterm=none
+" Include: #include
+highlight Include       ctermfg=33 ctermbg=none cterm=none
+" Define: #define
+highlight Define       ctermfg=33 ctermbg=none cterm=none
+" PreCondit: #if, #else, #endif, etc.
+highlight PreCondit       ctermfg=33 ctermbg=none cterm=none
 " Type: linked by cType: bool. char, uint16_t, ...
-highlight Type          ctermfg=199 ctermbg=none cterm=none
+highlight Type          ctermfg=39 ctermbg=none cterm=bold
+" Storage class: static, register, volatile, etc.
+highlight StorageClass ctermfg=199 ctermbg=none cterm=bold
+" Structure: struct, union, enum, etc.
+highlight Structure ctermfg=199 ctermbg=none cterm=bold
+" Typedef
+highlight Typedef ctermfg=199 ctermbg=none cterm=bold
 " Number: linked by 
 highlight Number        ctermfg=202 ctermbg=none cterm=none
 " Constant: linked by cConstant: NULL
@@ -150,11 +204,25 @@ highlight Constant      ctermfg=154 ctermbg=none cterm=none
 " String: linked by cString, cppString, cIncluded
 highlight String        ctermfg=121 ctermbg=none cterm=none
 " Special: \n, \r,...
-highlight Special       ctermfg=white ctermbg=none cterm=none
-" Identifier: variable identifier names
-highlight Identifier    ctermfg=white ctermbg=none cterm=none
+highlight Special       ctermfg=231 ctermbg=none cterm=none
+" Special: \n, \r,...
+highlight SpecialChar   ctermfg=231 ctermbg=none cterm=none
+" Tag: you can use CTRL-] on this
+highlight Tag       ctermfg=231 ctermbg=none cterm=none
+" Delimiter: character that needs attention
+highlight Delimiter       ctermfg=231 ctermbg=none cterm=none
+" SpecialComment: special things inside a comment
+highlight SpecialComment       ctermfg=231 ctermbg=none cterm=none
+" debugging statements
+highlight Debug         ctermfg=231 ctermbg=none cterm=none
+" Underlined: text that stands out, HTML links
+highlight Underlined    ctermfg=none ctermbg=none cterm=underline
+" Ignore: left blank, hidden
+highlight Ignore        ctermfg=none ctermbg=none cterm=none
 " Error: various errors
 highlight Error         ctermfg=red ctermbg=none cterm=underline,bold
+" Todo: linkeds by cTodo: contained TODO FIXME XXX
+highlight Todo          ctermfg=234 ctermbg=201 cterm=bold
 
 " YouCompleteMe colors: YCM has a fallback to Syntastic colors,
 " so we define the Syntastic variables here to make it working
