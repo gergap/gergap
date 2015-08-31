@@ -1,0 +1,123 @@
+This is a simple syntax test file.
+==================================
+
+Standard Vim highlight groups: See :h highlight-groups
+------------------------------------------------------
+
+Normal
+LineNumber
+ColorColumn
+Conceal
+Cursor
+CursorIM
+CursorColumn
+CursorLine
+Directory
+DiffAdd
+DiffChange
+DiffDelete
+DiffText
+ErrorMsg
+VertSplit
+Folded
+FoldColumn
+SignColumn
+IncSearch
+Search
+LineNr
+CursorLineNr
+MatchParen
+ModeMsg
+MoreMsg
+NonText
+SpecialKey
+Pmenu
+PmenuSel
+PmenuSbar
+PmenuThumb
+Question
+SpellBad
+SpellCap
+SpellLocal
+SpellRare
+StatusLine
+StatusLineNC
+TabLine
+TabLineFill
+TabLineSel
+Title
+Visual
+VisualNOS
+WarningMsg
+WildMenu
+Menu
+Scrollbar
+Tooltip
+
+Highlight groups for syntax highlighting:
+Comment
+Identifier
+Function
+Statement
+Conditional
+Repeat
+Label
+Operator
+Keyword
+Exception
+PreProc
+Include
+Define
+PreCondit
+Type
+StorageClass
+Structure
+Typedef
+Number
+Constant
+String
+Special
+SpecialChar
+Tag
+Delimiter
+SpecialComment
+Debug
+Underlined
+Ignore
+Error
+Todo
+
+Syntastic groups:
+-----------------
+SyntasticWarningSign
+SyntasticErrorSign
+SyntasticWarning
+SyntasticError
+
+YouCompleteMe groups:
+---------------------
+YcmWarningSign
+YcmErrorSign
+YcmWarningSection
+YcmErrorSection
+
+ShowMarks groups:
+-----------------
+ShowMarksHLl
+ShowMarksHLu
+ShowMarksHLm
+ShowMarksHLo
+
+Colors:
+-------
+
+Black White
+Gray1 Gray2 Gray3 Gray4 Gray5 Gray6 Gray8
+Red         Green   Blue
+Red2        Green2  Blue2
+Magenta     Green3  Blue3
+Magenta2    Yellow  Blue4
+Purple      Orange  Cyan
+
+
+
