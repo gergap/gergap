@@ -208,7 +208,7 @@ highlight Special       ctermfg=231 ctermbg=none cterm=none
 " Special: \n, \r,...
 highlight SpecialChar   ctermfg=231 ctermbg=none cterm=none
 " Tag: you can use CTRL-] on this
-highlight Tag       ctermfg=231 ctermbg=none cterm=none
+highlight Tag       ctermfg=33 ctermbg=none cterm=none
 " Delimiter: character that needs attention
 highlight Delimiter       ctermfg=231 ctermbg=none cterm=none
 " SpecialComment: special things inside a comment
@@ -216,7 +216,7 @@ highlight SpecialComment       ctermfg=231 ctermbg=none cterm=none
 " debugging statements
 highlight Debug         ctermfg=231 ctermbg=none cterm=none
 " Underlined: text that stands out, HTML links
-highlight Underlined    ctermfg=none ctermbg=none cterm=underline
+highlight Underlined    ctermfg=39 ctermbg=none cterm=underline
 " Ignore: left blank, hidden
 highlight Ignore        ctermfg=none ctermbg=none cterm=none
 " Error: various errors
@@ -245,4 +245,12 @@ highlight ShowMarksHLu          ctermfg=39      ctermbg=none    cterm=none
 highlight ShowMarksHLm          ctermfg=39      ctermbg=none    cterm=none
 " for multiple marks on the same line
 highlight ShowMarksHLo          ctermfg=39      ctermbg=none    cterm=none
+
+" VimWiki
+highlight VimwikiHeader1 ctermfg=231
+highlight VimwikiHeader2 ctermfg=231
+highlight VimwikiHeader3 ctermfg=231
+highlight VimwikiHeader4 ctermfg=231
+highlight VimwikiHeader5 ctermfg=231
+highlight VimwikiHeader6 ctermfg=231
 
