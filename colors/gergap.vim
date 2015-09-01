@@ -228,7 +228,7 @@ highlight Ignore        ctermfg=none ctermbg=none cterm=none
 " Error: various errors
 highlight Error         ctermfg=red ctermbg=none cterm=underline,bold
 " Todo: linkeds by cTodo: contained TODO FIXME XXX
-highlight Todo          ctermfg=234 ctermbg=201 cterm=bold
+highlight Todo          ctermfg=201 ctermbg=none cterm=bold
 
 " YouCompleteMe colors: YCM has a fallback to Syntastic colors,
 " so we define the Syntastic variables here to make it working
