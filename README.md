@@ -21,3 +21,8 @@ to your ~/.tmux.conf.
 
 Note: adding "TERM=..." to your .bashrc is a bad idea! The terminal application should always set this to the correct value.
 
+# Fonts
+
+You need a font which supports italic typeface. I personally use the Hack font from https://github.com/chrissimpkins/Hack
+patched with powerline symbols.
+See https://github.com/gergap/fonts
