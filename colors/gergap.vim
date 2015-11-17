@@ -62,13 +62,13 @@ exe "highlight!  CursorColumn  ctermbg=".s:gray3." ctermfg=none cterm=none"
 exe "highlight!  CursorLine    ctermbg=".s:gray3." ctermfg=none cterm=none"
 "Directory       directory names (and other special names in listings)
 "DiffAdd         diff mode: Added line diff.txt
-exe "highlight!  DiffAdd       ctermfg=".s:gray4." ctermbg=118 cterm=none"
+exe "highlight!  DiffAdd       ctermfg=".s:gray4." ctermbg=".s:green." cterm=none"
 "DiffChange      diff mode: Changed line diff.txt
-exe "highlight!  DiffChange    ctermfg=".s:gray4." ctermbg=208 cterm=none"
+exe "highlight!  DiffChange    ctermfg=".s:gray4." ctermbg=".s:yellow." cterm=none"
 "DiffDelete      diff mode: Deleted line diff.txt
-exe "highlight!  DiffDelete    ctermfg=".s:gray4." ctermbg=175 cterm=none"
+exe "highlight!  DiffDelete    ctermfg=".s:gray4." ctermbg=".s:red2." cterm=none"
 "DiffText        diff mode: Changed text within a changed line diff.txt
-exe "highlight!  DiffText      ctermfg=".s:gray4." ctermbg=190 cterm=none"
+exe "highlight!  DiffText      ctermfg=".s:gray4." ctermbg="s:orange." cterm=bold"
 "ErrorMsg        error messages on the command line
 "VertSplit       the column separating vertically split windows
 exe "highlight!  VertSplit     ctermfg=242 ctermbg=237 cterm=none"
